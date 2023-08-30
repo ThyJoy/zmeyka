@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+   
+}
+.d-none {
+    display: none !important;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100dvh;
+}
+#Game {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: rgb(143, 17, 136);
+    border: 1px solid black;
+    position: relative;
+}
+
+.gameOver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+}
+
+@font-face 
+{
+    font-family: 'game';
+    src: url('../font/GameOver.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gameOver h3,h5 {
+    font-family: 'game';
+    color: red;
+    text-shadow: 1px 2px 0 black;
+}
+
+.snake__head {
+    background-color: transparent !important;
+    background-image: url('../source/head.png') !important;
+    background-position: center;
+    background-size: contain;
+}
+
+.snake__body {
+    background-color: #128dcb;
+    border-radius: 50%;
+}
+.badFood {
+    background-image: url('../source/badFood.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.food {
+    background-image: url('../source/food.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Right {
+    transform: rotate(90deg);
+}
+.Down {
+    transform: rotate(180deg);
+}
+.Left {
+    transform: rotate(270deg);
+}
+.Up {
+    transform: rotate(0deg);
+}
+
+button {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+
+}
